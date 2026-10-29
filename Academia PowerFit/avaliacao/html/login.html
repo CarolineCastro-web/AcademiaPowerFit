@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - PowerFit</title>
+<link rel="website icon" type href="../fotos/PowerFitIcon.jpeg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="../css/stylelogin.css">
+</head>
+
+<body>
+
+    <div class="login">
+        <h2>Entrar</h2>
+    <p>Entre na sua conta PowerFit.</p>
+
+    <form id="loginForm">
+
+    <div class="input-box">
+    <label>Email</label>
+    <input type="email" placeholder="Digite seu email" required>
+    </div>
+
+    <div class="input-box">
+    <label>Senha</label>
+    <input type="password" placeholder="Digite sua senha" required>
+    </div>
+
+    <div class="opcoes">
+
+    <label>
+    <input type="checkbox">
+    Lembrar de mim
+    </label>
+
+    </div>
+
+    <button class="button" type="submit">
+    Entrar
+    </button>
+
+    <div class="cadastro">
+    Ainda não possui uma conta?
+    <a href="cadastro.html">Cadastre-se</a>
+    </div>
+    <p><br><a href="../html/PaginaPrincipal (2).html">Voltar para a página principal</a></p>
+</form>
+</div>
+
+    <div class="caixa" id="caixa">
+    <div class="caixa-box">
+    <i class="fa-solid fa-circle-check"></i>
+    <h3>Login realizado!</h3>
+    <p>
+        Bem-vindo(a) à PowerFit.
+    </p>
+
+    <button class="button" onclick="entrar()">
+    Continuar
+    </button>
+
+</div>
+</div>
+<script>
+
+const login = document.getElementById("loginForm");
+const caixa = document.getElementById("caixa");
+
+login.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    caixa.classList.add("ativa");
+
+});
+
+function entrar(){
+
+    window.location.href="PaginaPrincipal (2).html";
+
+}
+
+</script>
+
+</body>
+</html>

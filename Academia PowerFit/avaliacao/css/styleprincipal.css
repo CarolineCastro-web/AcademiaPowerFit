@@ -1,0 +1,365 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url("../fotos/Academia.jpg") center/ cover no-repeat;
+            height: 100vh;
+            color: white;
+            padding-top: 80px;
+        }
+
+        header {
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 35px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgb(0, 0, 0, .45);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .botoes{
+           display: flex;
+           gap: 10px;    
+        }
+
+        .Logo {
+            height: 60px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 40px;
+        }
+
+        .btn-topo {
+            background: #00bfff;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 60px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 23px;
+            margin-bottom: 70px;
+        }
+
+        .Planos {
+            background: #1a1a1a;
+            padding: 43px 50px;
+            text-align: center;
+        }
+        .card {
+         background: #1a1a1a;
+         color: white;
+         width: 300px;
+         padding: 30px;
+         border-radius: 20px;
+         transition: all 0.4s ease;
+         cursor: pointer;
+         border: 2px solid #00bfff;
+         box-shadow: 0 0 15px #00bfff;
+         text-decoration: none;
+         display: flex;
+         flex-direction: column;
+        }
+        .cards {
+         display: flex;
+         justify-content: center;
+         align-items: stretch;  
+         gap: 30px;
+        flex-wrap: wrap;
+        }
+        .card hr{
+            border-color: #00bfff;
+        }
+        .card h3 {
+            margin-bottom: 15px;  
+            color: #00bfff;
+        }
+
+        .card p{
+            margin-top: 15px;
+            margin-left: 0%;
+            margin-bottom: 0px;
+            text-align: left;
+        }
+
+        .card:hover {
+            transform: scale(1.08);
+            background: #00bfff;
+            color: black;
+            box-shadow: 0 0 30px #00bfff;
+        }
+
+        .card:hover h3 {
+            color: black;
+        }
+
+        .card ul {
+            text-align: left;
+            margin-top: 0px;
+           
+        }
+
+        .card li {
+            margin: 8px 0;
+            margin-left: 15px;
+        }
+
+        .sobre {
+            min-height: 600px;
+            display: flex;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .sobre-nos {
+            height: 90vh;
+            width: 50%;
+            padding: 80px;
+            display: flex;
+            color: white;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .sobre-nos h4 {
+            font-size: 1rem;
+            color: #00bfff;
+            letter-spacing: 3px;
+        }
+
+        .sobre-nos h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .sobre-nos span {
+            color: #00bfff;
+        }
+
+        .sobre-nos p {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #d9d9d9;
+            text-align: justify;
+            max-width: 500px;
+        }
+
+        .img-Sobre {
+            width: 50%;
+            position: relative;
+        }
+
+        .img-Sobre::before {
+            content: "";
+            position: absolute;
+            left: -50px;
+            top: -10;
+            width: 100px;
+            height: 100%;
+            background: #00bfff;
+            transform: skewX(-8.7deg);
+            z-index: 2;
+            box-shadow: 0 0 30px #00bfff;
+        }
+
+        .img-Sobre img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .Informacao {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            max-width: 1200px;
+            flex-wrap: wrap;
+        }
+
+        .info {
+            width: 250px;
+            text-align: center;
+        }
+
+        .info i {
+            width: 90px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            font-size: 42px;
+            color: #00bfff;
+            margin-bottom: 20px;
+            transition: 4s;
+        }
+
+        .info h4 {
+            color: white;
+            background-image: #00bfff;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .info p {
+            font-size: 18px;
+            color: #ddd;
+        }
+       .contato{
+         background:#111;
+         display:flex;
+         justify-content:center;
+         gap:70px;
+         padding:90px 60px;
+         flex-wrap:wrap;
+}
+        .contato-info{
+         width:400px;
+        color:white;
+}
+        .contato-info h2{
+        color:#00bfff;
+        font-size:42px;
+         margin-bottom:20px;
+}
+.contato-info>p{
+    color:#d9d9d9;
+    margin-bottom:35px;
+    line-height:1.7;
+}
+.item-contato{
+    margin-bottom:30px;
+}
+.item-contato h4{
+    color:#00bfff;
+    margin-bottom:8px;
+}
+.item-contato p{
+    color:#d9d9d9;
+}
+.formulario{
+    width:500px;
+}
+#formContato{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+#formContato input,
+#formContato textarea{
+    padding:16px;
+    border:none;
+    border-radius:10px;
+    background:#222;
+    color:white;
+    font-size:16px;
+}
+#formContato input:focus,
+#formContato textarea:focus{
+    outline:2px solid #00bfff;
+}
+#formContato textarea{
+    resize:none;
+}
+#formContato button{
+    background:#00bfff;
+    color:white;
+    border:none;
+    padding:16px;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+#formContato button:hover{
+    background:#0099cc;
+}
+    .caixa-sucesso{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .75);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: .4s;
+        z-index: 9999; 
+    }
+    .caixa-sucesso.ativo{
+        visibility: visible;
+        opacity: 1;
+    }
+    .caixaModal{
+        width: 420px;
+        background: #1a1a1a;
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        box-shadow:0 0 25px #00bfff;
+    }
+    .caixaModal i{
+        font-size: 70px;
+        color: #00bfff;
+        margin-bottom: 20px;
+    }
+    .caixaModal h2{
+        color: white;
+        margin-bottom: 15px;
+    }
+    .caixaModal p{
+        color: #d9d9d9;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+    .caixaModal button{
+        background: #00bfff;
+        color: white;
+        border: none;
+        padding: 12px 35px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 17px;
+        transition: .3s; 
+    }
+    .caixaModal button:hover {
+        background: #0099cc;
+        transform: scale(1.06);
+    }

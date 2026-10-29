@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - PowerFit</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+      <link rel="website icon" type href="../fotos/PowerFitIcon.jpeg">
+      <link rel="stylesheet" href="../css/stylecadastro.css">
+</head>
+    
+   <body>
+        <div class="cadastro">
+            <h2>Cadastrar-se</h2>
+            <p>Por favor, preencha esse formulário para criar sua conta.</p>
+            <form id="cadastroform">
+
+            <div class="input-box">
+            <label for="uname"><b>Nome de Usuário</b></label>
+            <input type="text" placeholder="Digite seu nome de usuário" name="uname" required>
+            </div>
+
+            <div class="input-box">
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Digite seu email" name="email" required>
+            </div>
+
+            <div class="input-box">
+            <label for="psw"><b>Senha</b></label>
+            <input type="password" placeholder="Digite sua senha" name="psw" required>
+            </div>
+
+            <div class="input-box">
+            <label for="psw-repeat"><b>Confirmar senha</b></label>
+            <input type="password" placeholder="Confirme sua senha" name="psw-repeat" required>
+            </div>
+
+            <label class="Lembrar">
+                <input type="checkbox" name="LB" id="confirmar">Lembrar de mim</label>
+
+                <button type="submit" class="button">
+                    Cadastra-se
+                </button>
+          
+            <div class="login">
+                Já possui uma conta?
+                <a href="login.html">Entrar</a>
+            </div>
+            <p><br><a href="PaginaPrincipal (2).html">Voltar para a página pricipal</p></a>
+            </form>
+            
+            <div class="caixa" id="caixa">
+                <div class="caixa-box">
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <h3>Cadastro realizado</h3>
+                    <p>
+                        Sua conta foi realizada com sucesso <br>
+                        Agora você já pode escolher um plano da PowerFit.
+                    </p>
+
+                    <button class="button" onclick="fecharCaixa()">
+                        OK
+                    </button>
+                </div>
+            </div>
+
+              <script>
+        const formulario = document.getElementById("cadastroform");
+        const caixa = document.getElementById("caixa");
+
+formulario.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    caixa.classList.add("ativa");
+     
+});
+     function fecharCaixa(){
+        window.location.href = "PaginaPrincipal (2).html";
+    }
+
+    </script>
+</body>
+           
+</html>

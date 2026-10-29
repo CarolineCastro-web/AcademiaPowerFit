@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos</title>
+     <link rel="website icon" type href="../fotos/PowerFitIcon.jpeg">
+    <link rel="stylesheet" href="../css/styleform.css">       
+    </head>
+  
+    <body>
+        <div class="container">
+            <div class="formulario">
+                <h2>Finalizar matricula</h2>
+
+                <form id="FormCompra">
+                <input type="text" placeholder="Nome completo" required>
+
+                <input type="text" placeholder="Email" required>
+
+                <input type="text" placeholder="CPF" required>
+
+                <input type="text" placeholder="Telefone" required>
+
+                <select name="pagamento">
+
+                    <option selected disabled value="">Selecione a forma de pagamento</option>
+
+                    <Option value="Pix">Pix</Option>
+                    <option value="CartaodeCredito">Cartão de Crédito</option>
+                    <option value="CartaodeDebito">Cartão de Débito</option>
+                    <option value="Boleto">Boleto</option>
+
+                </select>
+                    <button type="submit">
+                        Finalizar Compra
+                    </button>
+                    <p><br><a href="PaginaPrincipal (2).html">Voltar para a página pricipal</p></a>
+                </form>
+            </div>
+
+            <div class="carrinho">
+                <h3>
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Minha matricula
+                </h3>
+                <hr>
+                <p><b>Plano:</b></p>
+                <h2 id="NomePlano">Gold</h2>
+                <hr>
+                <p>Mensalidades</p>
+                <h2 id="PrecoPlano">R$199,90</h2>
+                <hr>
+                <p>Taxa de matrícula</p>
+                <h3>Grátis</h3>
+                <hr>
+                <h2>Total</h2>
+                <h1 id="Total">R$199,90</h1>
+            </div>
+        </div>
+            <div class="caixa" id="caixa">
+                <div class="caixa-box">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h2>Compra realizada</h2>
+                    <p>Matrícula realizada   com sucesso</p>
+                    <button onclick="voltar()">OK</button>
+                </div>
+            </div>
+
+            <script>
+                const parametros = new URLSearchParams(window.location.search);
+
+                const Planos = parametros.get("Planos");
+
+                const NomePlano = document.getElementById("NomePlano");
+
+                const PrecoPlano = document.getElementById("PrecoPlano");
+
+                const Total = document.getElementById("Total")
+
+                    if(Planos == "Silver"){
+                        NomePlano.innerHTML = "Silver";
+                        PrecoPlano.innerHTML = "R$129,90";
+                        Total.innerHTML = "R$129,90"
+                    }
+                    
+                    if(Planos == "Gold"){
+                        NomePlano.innerHTML = "Gold";
+                        PrecoPlano.innerHTML = "R$199,90";
+                        Total.innerHTML = "R$199,90"
+                    }
+                    
+                    if(Planos == "Platinum"){
+                        NomePlano.innerHTML = "Platinum";
+                        PrecoPlano.innerHTML = "R$239,90";
+                        Total.innerHTML = "R$239,90"
+                    }
+
+                    const form=document.getElementById("FormCompra");
+
+                    const caixa=document.getElementById("caixa");
+
+                    form.addEventListener("submit", function(e){
+
+                        e.preventDefault();
+
+                        caixa.classList.add("ativa");
+                    });
+
+                    function voltar(){
+                        window.location.href = "PaginaPrincipal (2).html"
+                    }
+            </script>
+    </body>
+    </html>

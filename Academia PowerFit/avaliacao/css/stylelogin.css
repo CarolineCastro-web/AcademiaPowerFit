@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url("690d2e637be04b05e990cb5f_academia.jpg");
+
+    background-size:cover;
+    background-position:center;
+    }
+
+    .login{
+    width:450px;
+    background:#111;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 0 15px #00bfff;
+    }
+
+    .login a{
+        color:#00bfff;
+    }
+
+    .login h2{
+    color:#00bfff;
+    text-align:center;
+    font-size:38px;
+    margin-bottom:10px;
+    }
+
+    .login p{
+    color:#ccc;
+    text-align:center;
+    margin-bottom:30px;
+    }
+
+    .input-box{
+    margin-bottom:18px;
+    }
+
+    .input-box label{
+    color:white;
+    display:block;
+    margin-bottom:8px;
+    }
+
+    .input-box input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    }
+
+    .input-box input:focus{
+    outline:2px solid #00bfff;
+    }
+
+    .opcoes{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:15px 0;
+    color:white;
+    }
+
+    .opcoes a{
+    color:#00bfff;
+    text-decoration:none;   
+    }
+
+    .button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#00bfff;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+    }
+
+    .button:hover{
+    background:#0099cc;
+    }
+
+    .cadastro{
+    margin-top:20px;
+    text-align:center;
+    color:#ccc;
+    }
+
+    .cadastro a{
+    color:#00bfff;
+    text-decoration:none;
+    }
+
+    .caixa{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    visibility:hidden;
+    opacity:0;
+    transition:.3s;
+    }
+
+    .caixa.ativa{
+    visibility:visible;
+    opacity:1;
+    }
+
+    .caixa-box{
+    width:360px;
+    background:#111;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 20px #00bfff;
+    }
+
+    .caixa-box i{
+    font-size:70px;
+    color:#00bfff;
+    margin-bottom:20px;
+    }
+
+    .caixa-box h3{
+    color:white;
+    margin-bottom:15px;
+    }
+
+    .caixa-box p{
+    color:#ccc;
+    margin-bottom:20px;
+    }
